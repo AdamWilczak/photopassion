@@ -12,16 +12,12 @@ photos.forEach((photo, index) => {
     img.classList.add("modal-image");
     modal.appendChild(img);
     currentPhotoIndex = index;
-  });
-});
 
-document.addEventListener("click", (event) => {
-  if (event.target.classList.contains("modal-image")) {
-    return;
-  }
-  if (event.target.classList.contains("modal")) {
-    event.target.remove();
-  }
+    // add event listener to close modal on click
+    img.addEventListener("click", () => {
+      modal.remove();
+    });
+  });
 });
 
 document.addEventListener("keyup", (event) => {
