@@ -1,40 +1,47 @@
-const galleryItems = document.querySelectorAll(".gallery-item");
-let currentImgIndex = 0;
+const photos = document.querySelectorAll(".photo");
+let currentPhotoIndex = 0;
 
-galleryItems.forEach((item, index) => {
-  item.addEventListener("click", () => {
-    const imgSrc = item.getAttribute("src");
-    const overlay = document.createElement("div");
-    overlay.classList.add("overlay");
-    document.body.appendChild(overlay);
+photos.forEach((photo, index) => {
+  photo.addEventListener("click", () => {
+    const photoSrc = photo.getAttribute("src");
+    const modal = document.createElement("div");
+    modal.classList.add("modal");
+    document.body.appendChild(modal);
     const img = document.createElement("img");
-    img.src = imgSrc;
-    img.classList.add("overlay-image");
-    overlay.appendChild(img);
-    currentImgIndex = index;
+    img.src = photoSrc;
+    img.classList.add("modal-image");
+    modal.appendChild(img);
+    currentPhotoIndex = index;
   });
 });
 
 document.addEventListener("click", (event) => {
-  if (
-    event.target.classList.contains("overlay") ||
-    event.target.classList.contains("overlay-image")
-  ) {
-    document.querySelector(".overlay").remove();
+  if (event.target.classList.contains("modal-image")) {
+    return;
+  }
+  if (event.target.classList.contains("modal")) {
+    event.target.remove();
   }
 });
 
 document.addEventListener("keyup", (event) => {
   if (event.key === "Escape") {
-    document.querySelector(".overlay").remove();
+    document.querySelector(".modal").remove();
   } else if (event.key === "ArrowRight") {
-    currentImgIndex = (currentImgIndex + 1) % galleryItems.length;
-    const imgSrc = galleryItems[currentImgIndex].getAttribute("src");
-    document.querySelector(".overlay-image").src = imgSrc;
+    currentPhotoIndex++;
+    if (currentPhotoIndex >= photos.length) {
+      currentPhotoIndex = 0;
+    }
+    const photoSrc = photos[currentPhotoIndex].getAttribute("src");
+    const img = document.querySelector(".modal-image");
+    img.src = photoSrc;
   } else if (event.key === "ArrowLeft") {
-    currentImgIndex =
-      (currentImgIndex - 1 + galleryItems.length) % galleryItems.length;
-    const imgSrc = galleryItems[currentImgIndex].getAttribute("src");
-    document.querySelector(".overlay-image").src = imgSrc;
+    currentPhotoIndex--;
+    if (currentPhotoIndex < 0) {
+      currentPhotoIndex = photos.length - 1;
+    }
+    const photoSrc = photos[currentPhotoIndex].getAttribute("src");
+    const img = document.querySelector(".modal-image");
+    img.src = photoSrc;
   }
 });
