@@ -31,6 +31,3 @@ Visit the website at https://adamwilczak.github.io/photopassion/
 - Fonts from Google Fonts
 - Icons from Font Awesome
 
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
