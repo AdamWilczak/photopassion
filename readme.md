@@ -1,3 +1,36 @@
-#PHOTOPASSION
+# Photo Passion
 
-https://adamwilczak.github.io/photopassion
+This is a responsive website for More Than Studio, a photography lover. The website showcases his work and provides information about their services.
+
+## Technologies Used
+
+- HTML5
+- CSS3
+- JavaScript
+
+## Features
+
+- Responsive design for desktop, tablet, and mobile devices
+- Interactive navigation menu
+- Gallery displaying photos in different categories
+- Contact form for clients to get in touch
+
+## Usage
+
+Visit the website at https://adamwilczak.github.io/photopassion/
+
+## Screenshots
+
+![Screenshot of website on desktop](desktop-screenshot.png)
+
+![Screenshot of website on mobile](screenshots/mobile-screenshot.png)
+
+## Credits
+
+- Images by More Than Studio
+- Fonts from Google Fonts
+- Icons from Font Awesome
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
