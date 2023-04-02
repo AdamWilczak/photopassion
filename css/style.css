@@ -1,0 +1,36 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #b3b2b1;
+  font-family: "Lato", sans-serif;
+  
+}
+
+a {
+  text-decoration: none;
+}
+
+
+
+.footer {
+  position: sticky;
+  bottom: 0;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: #b3b2b1;
+  z-index: 1;
+  height: 30px;
+}
+.linkToPortfolio {
+  color: black;
+  font-size: x-small;
+  font-weight: bold;
+}
+
+
