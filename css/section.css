@@ -11,6 +11,13 @@
   margin-top: 40px;
   
 }
+
+@media only screen and (max-width: 600px){
+  .frame{
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
 .conteiner {
   display: flex;
   max-width: 1000px;
@@ -48,6 +55,13 @@
   padding-top: 30px;
   
 }
+@media only screen and (max-width: 600px){
+  .frame{
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
 .frame li {
   list-style: none;
 }

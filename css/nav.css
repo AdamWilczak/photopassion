@@ -11,13 +11,14 @@
   display: flex;
   justify-content:center;
   gap: 20px;
+  font-size: 20px;
   padding-top: 20px;
    
 }
 .navMenu a {
   color: black;
   text-decoration: none;
-  font-size: 20px;
+  
   text-transform: uppercase;
   font-weight: 500;
   transition: all 0.5s ease-in-out;
@@ -31,5 +32,15 @@
    color: rgb(147, 17, 151)!important;
 }
 
+@media only screen and (max-width: 600px) {
+  .navMenu{
+    flex-wrap: wrap;
+    font-size: 12px;
+    padding-left: 10px;
+    padding-right: 10px;
+    gap: 10px;
+    padding-top: 10px;
+  }
+}
 
 
