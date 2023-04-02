@@ -21,7 +21,7 @@ Visit the website at https://adamwilczak.github.io/photopassion/
 
 ## Screenshots
 
-![Screenshot of website on desktop](pic/desktop-screenshot.png)
+![Screenshot of website on desktop](pic/desktop-screenshot.jpg)
 
 ![Screenshot of website on mobile](pic/mobile-screenshot.png)
 
