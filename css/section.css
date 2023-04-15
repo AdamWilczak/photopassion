@@ -69,6 +69,13 @@
   display: none;
 }
 
+.me{
+  filter: grayscale();
+}
+
+.me:hover{
+  filter: none;
+}
 
 .description {
   font-size: 25px;
